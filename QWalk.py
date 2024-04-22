@@ -5,6 +5,9 @@
 # is created for each of the 2^15 possible combinations of initialization
 # state and node mark. The results are saved to the "data.out" file.
 
+# Based on the work done by the Qiskit contributors at:
+# https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-walk-search-algorithm.ipynb
+
 # For data output into a file
 import os
 
