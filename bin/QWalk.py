@@ -3,7 +3,10 @@
 # This Python program constructs the Coined Quantum Walk Search Circuit 
 # with a mark and initialized to a target state. The circuit 
 # is created for each of the 2^15 possible combinations of initialization
-# state and node mark. The results are saved to the "data.out" file.
+# state and node mark. The results are saved to the "data.out" file in the 
+# format:
+# |      Init string        |   |Target|  |                   Number of hits for each state                               |
+# <aux> <coin> <node> <theta>   <target>   0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111
 
 # Based on the work done by the Qiskit contributors at:
 # https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-walk-search-algorithm.ipynb
@@ -14,7 +17,6 @@ import os
  # Importing standard Qiskit libraries
 from qiskit_ibm_provider import IBMProvider
 from qiskit import QuantumCircuit, execute, Aer, IBMQ, QuantumRegister, ClassicalRegister
-from qiskit.visualization import *
 from qiskit.circuit.library import QFT
 from qiskit.circuit import Qubit
 
@@ -41,6 +43,7 @@ class QWalk:
     # Constructs and runs the Coined Quantum Walk search for a set of inputs
     # theta: Initialization string for the theta qubits (4 qubits)
     # node: Initialization string for the starting node (4 qubits)
+    #       This is where the 2-mer code would be entered.
     # coin: Initialization string for the coin qubits (2 qubits)
     # aux: Initialization string for the aux qubit (1 qubit)
     # target: Initialization string for the target node (4 binary bits)
