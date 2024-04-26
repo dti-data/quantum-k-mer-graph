@@ -1,5 +1,5 @@
 #/bin/bash
-# author: Gustavo Becerra <gbecerra@mx1.ibm.com>
+# author: Gustavo Becerra <gustavo.becerra>
 
 set -x
 

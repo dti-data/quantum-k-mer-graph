@@ -9,11 +9,11 @@ The materials in this repository are intended to be executed in a container. It 
 - Internet connectivity.
 - A healthy **podman** container environment intalled into the operating system.
 - The **git** client to clone this repository.
-- An IBM Quantum Platform **API Key**.
+- An IBM Quantum Platform **API Key**. This key is created when logging into the [IBM Quantum Platform](https://quantum.ibm.com/) web interface and producing one. 
 
 ## Execution Instructions
 
-The scripts and files in this repository construct a self contained environemnt intended for easy replication. To reproduce the output from the Coined Quantum Walk search follow these steps
+The scripts and files in this repository construct a self contained environment intended for easy replication. To reproduce the output from the Coined Quantum Walk search follow these steps
 - Clone this repository into the Linux machine.
 - Copy the IBM Quantum Platform API Key contents into the file [./ibmq_apikey.dat](./ibmq_apikey.dat).
 - Execute [./build_qwalk.sh](./build_qwalk.sh).
@@ -27,10 +27,10 @@ The [./bin/QWalk.py](./bin/QWalk.py) program is the main program being executed.
 If your podman environment is healthy the container will start running and the console will output information similar to:
 
 ```
-dev@wrsp:~/wrsp.dti/git/dti-data/quantum-walk-dna-pattern-matching$ ./run_qwalk.sh 
+dev@wrsp:~/dti-data/quantum-walk-dna-pattern-matching$ ./run_qwalk.sh 
 qwalk
 qwalk
-++ podman run -it --name qwalk -h qwalk -e IBMQE_API=<your ibmqe api key> local/qwalk:00
+++ podman run -it --name qwalk -h qwalk -e IBMQE_API=<your ibm quantum platform api key> local/qwalk:00
 Connecting to the IBM Quantum Platform
 0 00 0000 0000   0000    893   7   4   6  10   8   9   7  11   5  12  13   7   8  10  14
 0 00 0000 0000   0001      4 906   8   8   6   8  12   8   7   8  12   7   8   7   9   6
